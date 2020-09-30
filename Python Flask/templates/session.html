@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{session["title"]}}</title>
+
+</head>
+
+<body bgcolor= {{session["color"]}}>
+<h1>{{session["title"]}}</h1><br>
+Welcome {{session["username"]}}!
+<hr><br>
+<img src={{session["image"]}} width="200px" height="200px">
+<br><br><br>
+		<form name="logoutForm" action="assignment11.html" method="get">
+			<input type="hidden" name="logout" value="doLogout"><br>
+			<input type="submit" value="Logout" />
+		</form>
+<br><br><hr><br>
+<form name="editAccountForm" action="assignment11.html" method="get">
+<table>
+  <tr>
+    <td>First name:</td>
+    <td><input type="text" name="fname" value={{session["fname"]}} /></td>
+  </tr>
+  <tr>
+    <td>Last name:</td>
+    <td><input type="text" name="lname" value={{session["lname"]}} /></td>
+  </tr>
+  <tr>
+    <td>Background color:</td>
+    <td><input type="text" name="color" value={{session["color"]}} /></td>
+  </tr>
+  <tr>
+    <td>Title:</td>
+    <td><input type="text" name="title" value= "{{session["title"]}}"></td>
+  </tr>
+  <tr>
+    <td>Image:</td>
+    <td><input type="text" name="image" size="100" value={{session["image"]}} /></td>
+  </tr>
+</table>
+<input type="hidden" name="edit" value="true">
+<input type="submit" value="Edit Account Information" />
+
+
+
+</body>
+</html>
